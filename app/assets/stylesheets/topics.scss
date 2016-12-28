@@ -5,6 +5,11 @@
     margin-right: 0;
     margin-left: 0;
   }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
   h2 {
     margin-bottom: 20px;
     font-size: 18px;
@@ -26,6 +31,12 @@ input[type="submit"].btn-block {
 }
 
 /* common style */
+.center {
+  text-align: center;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
 .mb20 {
   margin-bottom: 20px;
 }

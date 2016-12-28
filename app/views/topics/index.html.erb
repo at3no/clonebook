@@ -4,11 +4,11 @@
 
 <h1>トピックス一覧</h1>
 
-<%= link_to "トピックスを作成する", new_topic_path, class: 'btn btn-primary' %>
+<%= link_to "トピックスを作成する", new_topic_path, class: 'btn btn-primary mb30' %>
 
 <% @topics.each do |topic| %>
 <div class="row">
-<p class="mb20"><%= topic.content %></p>
+<p class="mb10"><%= topic.content %></p>
 <div class="btn_area cf mb30">
 <%= link_to "トピックスを編集する", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success left_btn' %>
 <%= link_to "トピックスを削除する", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger right_btn' %>
