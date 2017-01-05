@@ -6,11 +6,8 @@ class NoticeMailer < ApplicationMailer
   #   en.notice_mailer.sendmail_topic.subject
   #
   def sendmail_topic(topic)
-    @greeting = "Hi"
-
     @topic = topic
-
-    mail to: "go02sleep@gmail.com"
+    mail to: "go02sleep@gmail.com",
       subject: 'トピックスが投稿されました'
   end
 end
