@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 
   match "topics/new", :via => :post
 
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
 end
