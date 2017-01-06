@@ -51,3 +51,6 @@ gem 'devise'
 group :development do
   gem 'letter_opener_web'
 end
+
+gem 'rails_admin'
+gem 'cancan'
