@@ -15,30 +15,36 @@
     <%= f.text_field :name, class: "form-control mb30" %>
   </div>
 
+  <% if @user.provider.blank? %>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
+  <div class="field mb30">
     <p class="mb10"><%= f.label :password %> <i>(leave blank if you don't want to change it)</i></p>
-      <% if @minimum_password_length %>
-      <em class="mb10"><%= @minimum_password_length %> characters minimum</em>
-      <%= f.password_field :password, autocomplete: "off", class: "form-control mb30", placeholder: "パスワード" %>
-    <% end %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field mb30">
     <p class="mb10"><%= f.label :password_confirmation %></p>
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control mb30", placeholder: "パスワード確認" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field mb30">
     <p class="mb10"><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></p>
-    <%= f.password_field :current_password, autocomplete: "off", class: "form-control mb30", placeholder: "現在のパスワード" %>
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <% end %>
+
+  <div class="field mb30">
+    <p class="mb10"><%= profile_img(@user) if profile_img(@user) %></p>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Update", class: "btn btn-primary btn-block" %>
+    <%= f.submit "更新", class: "btn btn-primary btn-block" %>
   </div>
 <% end %>
 
