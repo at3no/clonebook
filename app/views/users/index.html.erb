@@ -6,8 +6,16 @@
     <div class="prof_cont">
       <p class="prof_pic mb10"><%= profile_img(user) %></p>
       <p class="mb10"><%= user.email %></p>
-      <p class="mb10"><%= render 'follow_form', user: user unless user == current_user %></p>
-      <p class="mt10"><%= link_to "詳細", user_path(user) %></p>
+      <!-- <p class="mb10"><%= render 'follow_form', user: user unless user == current_user %></p> -->
+      <p class="mt10 mb10"><%= link_to "詳細", user_path(user) %></p>
+      <% if user.id != current_user.id %>
+      <li>
+      <div class="item mb10">
+      <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
+      </div>
+      <%= render partial: 'follow_form', locals: { user: user } if signed_in? %>
+      </li>
+      <% end %>
     </div>
   <% end %>
   </div>
