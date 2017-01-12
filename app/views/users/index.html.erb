@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <h2>ユーザー</h2>
+  <div class="cf">
+  <% @users.each do |user| %>
+    <div class="prof_cont">
+      <p class="prof_pic mb10"><%= profile_img(user) %></p>
+      <p class="mb10"><%= user.email %></p>
+      <p class="mb10"><%= render 'follow_form', user: user unless user == current_user %></p>
+      <p class="mt10"><%= link_to "詳細", user_path(user) %></p>
+    </div>
+  <% end %>
+  </div>
+  </div>
+<!-- /.container --></div>

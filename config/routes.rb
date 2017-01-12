@@ -7,13 +7,24 @@ Rails.application.routes.draw do
     omniauth_callbacks: "users/omniauth_callbacks"
   }
 
-  resources :topics, only: [:index, :new, :create, :edit, :update, :destroy] do
+  resources :topics do
+    resources :comments
+
     collection do
       post :confirm
     end
   end
 
   match "topics/new", :via => :post
+
+  resources :users, only: [:index]
+  resources :relationships, only: [:show, :create, :destroy]
+
+  resources :users do
+    member do
+      get :followed, :followers
+    end
+  end
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

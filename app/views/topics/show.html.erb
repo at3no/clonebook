@@ -1,0 +1,25 @@
+<div class="container">
+<p id="notice" class="center mt20"><%= notice %></p>
+
+<div class="child row">
+<div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <div class="topic-text mb30">
+    <h2 class="left"><strong>内容</strong></h2>
+    <p class="left"><%= @topic.content %></p>
+    <p class="right small">
+      <strong>作成時間：</strong>
+      <%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
+    </p>
+  <!-- /.topic-text --></div>
+  <p>コメント一覧</p>
+  <div id="comments_area" class="mb20">
+    <%= render partial: 'comments/index', locals: { comments: @comments, topic: @topic } %>
+  </div>
+  <%= render partial: 'comments/form', locals: { comment: @comment, topic: @topic } %>
+  <% if current_user.id == @topic.user_id %>
+    <%= link_to '編集', edit_topic_path(@topic) %> |
+  <% end %>
+  <%= link_to '戻る', topics_path %>
+<!-- /.wrapper --></div>
+<!-- /.child --></div>
+<!-- /.container --></div>

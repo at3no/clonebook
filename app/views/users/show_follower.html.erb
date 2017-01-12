@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
+  <h2>フォロワー一覧</h2>
+  <% @user.followers.each do |user| %>
+      <div class="container-child">
+        <p class="prof_pic"><%= profile_img(user) %></p>
+        <p><%= user.name %></p>
+        <p><%= user.email %></p>
+      </div>
+  <% end %>
+  </div>
+</div>
