@@ -29,15 +29,6 @@ input[type="submit"].btn-block {
 .btn_area .right_btn {
   float: left;
 }
-.prof_cont {
-  width: 150px;
-  word-wrap: break-word;
-  padding: 10px;
-  float: left;
-  li {
-    list-style-type: none;
-  }
-}
 
 .prof_pic img {
   max-width: 120px;
@@ -65,4 +56,7 @@ input[type="submit"].btn-block {
 }
 .mt30 {
   margin-top: 30px;
+}
+.pb30 {
+  padding-bottom: 30px;
 }

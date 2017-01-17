@@ -95,9 +95,20 @@ header {
   }
 }
 
+#top_visual {
+  position: relative;
+}
+
 .flash {
-  color: #ff0000;
-  padding-top: 10px;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  color: #fff;
 }
 
 /* clearfix */

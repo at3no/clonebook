@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pb30">
 <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -38,7 +38,7 @@
   <% end %>
 
   <div class="field mb30">
-    <p class="mb10"><%= profile_img(@user) if profile_img(@user) %></p>
+    <p class="prof_pic mb10"><%= profile_img(@user) if profile_img(@user) %></p>
     <%= f.file_field :avatar %>
     <%= f.hidden_field :avatar_cache %>
   </div>
