@@ -7,6 +7,8 @@
     <h2 class="left"><strong>内容</strong></h2>
     <p class="left"><%= @topic.content %></p>
     <p class="right small">
+      <strong>投稿者：</strong>
+      <%= @topic.user.name %>&nbsp;&nbsp;
       <strong>作成時間：</strong>
       <%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
     </p>

@@ -12,7 +12,7 @@
 <%= link_to topic_path(topic) do %>
 <p class="mb10"><%= topic.content %></p>
 <% end %>
-<p class="small mb30">ユーザID：<%= topic.user_id %>&nbsp;&nbsp;&nbsp;ユーザ名：<%= topic.user.name %></p>
+<p class="small mb30"><!-- ユーザID：<%= topic.user_id %>&nbsp;&nbsp;&nbsp; -->投稿者：<%= topic.user.name %></p>
 <div class="btn_area cf mb30">
 <%= link_to "トピックスを編集する", edit_topic_path(topic.id), class: 'btn btn-default btn-sm btn-success left_btn' %>
 <%= link_to "トピックスを削除する", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn btn-danger right_btn' %>

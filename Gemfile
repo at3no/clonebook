@@ -52,7 +52,11 @@ gem 'devise'
 
 group :development do
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 gem 'rails_admin'
@@ -64,3 +68,6 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'faker'
+gem 'dotenv-rails'
+gem 'unicorn'
+gem 'therubyracer', platforms: :ruby

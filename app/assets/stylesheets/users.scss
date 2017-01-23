@@ -3,8 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .prof_cont {
   width: 150px;
+  min-height: 280px;
   word-wrap: break-word;
-  padding: 10px 10px 10px 0;
+  padding: 0 10px 10px 0;
   float: left;
   li {
     list-style-type: none;
