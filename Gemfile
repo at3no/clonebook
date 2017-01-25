@@ -71,3 +71,4 @@ gem 'faker'
 gem 'dotenv-rails'
 gem 'unicorn'
 gem 'therubyracer', platforms: :ruby
+gem 'fog'
