@@ -24,5 +24,7 @@ module Clonebook
     config.active_record.raise_in_transactional_callbacks = true
 
     config.action_view.field_error_proc = proc { |html_tag, _| html_tag }
+
+    config.time_zone = 'Tokyo'
   end
 end
